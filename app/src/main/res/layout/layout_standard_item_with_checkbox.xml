@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rv_standard"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:padding="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.globalitians.employees.customviews.CustomTextView
+                app:font_type="medium"
+                android:id="@+id/tv_standard_name"
+                android:layout_width="@dimen/dimen_200"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/size_10"
+                android:ellipsize="end"
+                android:hint="Standard Name"
+                android:maxLines="3"
+                android:textColor="@color/colorTextDrawer"
+                android:textSize="@dimen/font_size_18" />
+
+            <ImageView
+                android:id="@+id/iv_delete_standard"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                android:tint="@color/colorTextDrawer" />
+
+            <CheckBox
+                android:id="@+id/chkStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_standard_name"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:checked="false" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

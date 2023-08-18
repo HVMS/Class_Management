@@ -1,0 +1,186 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean" />
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_shadow" format="boolean" />
+        <attr name="civ_shadow_color" format="color" />
+        <attr name="civ_shadow_radius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <!-- the minimum of the range -->
+        <attr name="absoluteMinValue" format="integer|float" />
+
+        <!-- the maximum of the range -->
+        <attr name="absoluteMaxValue" format="integer|float" />
+
+        <!-- show a single slider -->
+        <attr name="singleThumb" format="boolean" />
+
+        <!-- show the labels on the right and left-->
+        <attr name="showLabels" format="boolean" />
+
+        <!-- alwaysActive will make the buttons and bar always draw as the activeColor (the default is false) -->
+        <attr name="alwaysActive" format="boolean" />
+
+        <!-- show the currently selected value above each thumb (defaults to true) -->
+        <attr name="valuesAboveThumbs" format="boolean" />
+
+        <!-- padding on either side on the slider -->
+        <attr name="internalPadding" format="dimension" />
+
+        <!-- the height of the bar -->
+        <attr name="barHeight" format="dimension" />
+
+        <!-- the color of the bar that is not selected -->
+        <attr name="defaultColor" format="color" />
+
+        <!-- the color of the bar that is selected -->
+        <attr name="activeColor" format="color" />
+
+        <!-- the color of the text above thumbs -->
+        <attr name="textAboveThumbsColor" format="color" />
+
+        <!-- set drawables for thumb handles -->
+        <attr name="thumbNormal" format="reference" />
+        <attr name="thumbPressed" format="reference" />
+        <attr name="thumbDisabled" format="reference" />
+
+        <!-- thumb shadow specifications -->
+        <attr name="thumbShadow" format="boolean" />
+        <attr name="thumbShadowColor" format="color" />
+        <attr name="thumbShadowXOffset" format="dimension" />
+        <attr name="thumbShadowYOffset" format="dimension" />
+        <attr name="thumbShadowBlur" format="dimension" />
+
+        <!-- to activate the thumbs and texts when the min and max values are the default ones (defaults to false) -->
+        <attr name="activateOnDefaultValues" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <!--where view must be located in default state-->
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="right" value="1" />
+            <enum name="center" value="0" />
+        </attr>
+
+        <!--Does view should been stick after touch up-->
+        <attr name="sticky" format="dimension">
+            <!--stick mode is off-->
+            <enum name="none" value="-2" />
+            <!--stick view if it has reached offset equals to its width-->
+            <enum name="self" value="-1" />
+        </attr>
+        <attr name="sticky_sensitivity" format="float" />
+
+        <!--the maximum offset that view can be moved-->
+        <attr name="clamp" format="dimension">
+            <enum name="parent" value="-1" />
+            <enum name="self" value="-2" />
+        </attr>
+
+        <!--move view to clamp if the offset reached this value-->
+        <attr name="bring_to_clamp" format="dimension">
+            <enum name="no" value="-1"/>
+        </attr>
+
+        <!--enable or disable swipe gestures -->
+        <attr name="swipe_enabled" format="boolean"/>
+
+        <!--enable or disable swipe gestures from left side-->
+        <attr name="left_swipe_enabled" format="boolean"/>
+
+        <!--enable or disable swipe gestures from right side-->
+        <attr name="right_swipe_enabled" format="boolean"/>
+
+    </declare-styleable>
+
+    <attr name="font_type" format="enum">
+        <enum name="black" value="1" />
+        <enum name="black_italic" value="2" />
+        <enum name="bold" value="3" />
+        <enum name="bold_italic" value="4" />
+        <enum name="light" value="5" />
+        <enum name="light_italic" value="6" />
+        <enum name="medium" value="7" />
+        <enum name="medium_italic" value="8" />
+        <enum name="regular" value="9" />
+        <enum name="regular_italic" value="10" />
+        <enum name="thin" value="11" />
+        <enum name="thin_italic" value="12" />
+    </attr>
+
+    <attr name="font_type_brandon" format="enum">
+        <enum name="black" value="1" />
+        <enum name="black_italic" value="2" />
+        <enum name="bold" value="3" />
+        <enum name="bold_italic" value="4" />
+        <enum name="light" value="5" />
+        <enum name="light_italic" value="6" />
+        <enum name="medium" value="7" />
+        <enum name="medium_italic" value="8" />
+        <enum name="regular" value="9" />
+        <enum name="regular_italic" value="10" />
+        <enum name="thin" value="11" />
+        <enum name="thin_italic" value="12" />
+    </attr>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCheckedTextView">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRadioButton">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomButton">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCheckBox">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomInputEditText">
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <attr name="dragEdge">
+        <flag name="left" value="1" />
+        <flag name="right" value="2" />
+        <flag name="top" value="4" />
+        <flag name="bottom" value="8" />
+    </attr>
+
+    <attr name="mode">
+        <enum name="normal" value="0" />
+        <enum name="same_level" value="1" />
+    </attr>
+
+    <attr name="flingVelocity" format="integer" />
+
+    <attr name="minDistRequestDisallowParent" format="dimension" />
+
+</resources>

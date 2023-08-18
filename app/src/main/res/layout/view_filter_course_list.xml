@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_course"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_55"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_5">
+
+        <com.globalitians.employees.utility.CircularImageView
+            android:id="@+id/iv_course"
+            android:layout_width="@dimen/size_55"
+            android:layout_height="@dimen/size_55"
+            app:civ_border="true"
+            app:civ_border_width="@dimen/size_1" />
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_toLeftOf="@+id/iv_delete_course"
+            android:layout_toRightOf="@+id/iv_course"
+            android:ellipsize="end"
+            android:hint="Course Name"
+            android:maxLines="3"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_size_16" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/size_5"
+        android:layout_marginBottom="@dimen/size_5"
+        android:background="@color/colorWhite" />
+</RelativeLayout>

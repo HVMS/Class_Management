@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_350"
+    android:layout_height="@dimen/dimen_450"
+    android:layout_margin="@dimen/dimen_5">
+
+    <com.globalitians.employees.utility.TouchImageView
+        android:id="@+id/iv_hw_image"
+        android:layout_width="@dimen/dimen_350"
+        android:layout_height="@dimen/dimen_450"
+        android:src="@drawable/ic_user_round"
+        android:scaleType="centerCrop">
+    </com.globalitians.employees.utility.TouchImageView>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2fff"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dimen_5"
+        android:src="@drawable/ic_close">
+    </ImageView>
+
+</FrameLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarThumbVertical="@drawable/rounded_corner_white"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lin_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_background_take_attendance">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:id="@+id/cv_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_8"
+                app:cardElevation="@dimen/dimen_5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10">
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            style="@style/tv_input_title"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/size_10"
+                            android:text="@string/strStudentId"
+                            android:textSize="@dimen/font_dimen_20"
+                            app:font_type="medium" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_student_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/size_10"
+                                android:background="@drawable/background_white_square"
+                                android:hint="@string/strStudentId"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:maxLines="1"
+                                android:padding="@dimen/size_12"
+                                android:singleLine="true"
+                                android:textSize="@dimen/size_18"
+                                app:font_type="medium" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:orientation="horizontal">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:id="@+id/tvSearch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/size_5"
+                                android:layout_marginRight="@dimen/size_5"
+                                android:layout_weight="1"
+                                android:background="@drawable/drawable_attendance_rounded_button"
+                                android:gravity="center_horizontal"
+                                android:padding="@dimen/size_10"
+                                android:text="@string/strSelectStudent"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font_size_16"
+                                android:textStyle="bold"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:id="@+id/tvTakeAttendance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/size_5"
+                                android:layout_marginRight="@dimen/size_5"
+                                android:layout_weight="1"
+                                android:background="@drawable/drawable_attendance_rounded_button"
+                                android:gravity="center_horizontal"
+                                android:padding="@dimen/size_10"
+                                android:text="@string/strTakeAttendance"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font_size_16"
+                                android:textStyle="bold"
+                                app:font_type="medium" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <com.globalitians.employees.customviews.CustomTextView
+                android:textSize="@dimen/font_dimen_22"
+                android:id="@+id/tv_or"
+                app:font_type="medium"
+                android:textColor="@color/colorTextDrawer"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:text="OR"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_scan"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:src="@drawable/ic_scanner" />
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:layout_marginBottom="@dimen/dimen_80"
+                android:textSize="@dimen/font_dimen_20"
+                app:font_type="medium"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorTextDrawer"
+                android:layout_below="@+id/iv_scan"
+                android:layout_width="wrap_content"
+                android:text="Scan Student ID"
+                android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

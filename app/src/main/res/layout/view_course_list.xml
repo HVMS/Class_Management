@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_course"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/size_5">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:padding="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_course"
+                android:layout_width="@dimen/size_55"
+                android:layout_height="@dimen/size_55"
+                app:civ_border="true"
+                app:civ_border_width="@dimen/size_1" />
+
+            <com.globalitians.employees.customviews.CustomTextView
+                app:font_type="medium"
+                android:id="@+id/tv_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_toLeftOf="@+id/iv_delete_course"
+                android:layout_toRightOf="@+id/iv_course"
+                android:ellipsize="end"
+                android:hint="Course Name"
+                android:maxLines="3"
+                android:textColor="@color/colorTextDrawer"
+                android:textSize="@dimen/font_size_18" />
+
+            <ImageView
+                android:id="@+id/iv_delete_course"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete"
+                android:tint="@color/colorTextDrawer" />
+
+            <CheckBox
+                android:id="@+id/chkCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:checked="false" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

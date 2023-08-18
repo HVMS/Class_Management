@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnApplyFilter"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center_horizontal"
+                android:text="Select Branch"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10">
+
+                <RadioGroup
+                    android:id="@+id/rgBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbVastral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size_2"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_filter_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/size_25"
+                        android:paddingTop="@dimen/size_10"
+                        android:paddingRight="@dimen/dimen_25"
+                        android:paddingBottom="@dimen/size_10"
+                        android:text="Vastral"
+                        android:textColor="@drawable/drawable_filter_color_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbOdhav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_filter_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/size_25"
+                        android:paddingTop="@dimen/size_10"
+                        android:paddingRight="@dimen/dimen_25"
+                        android:paddingBottom="@dimen/size_10"
+                        android:text="Odhav"
+                        android:textColor="@drawable/drawable_filter_color_selector" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/title_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:gravity="center_horizontal"
+                android:text="Month"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/title_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:gravity="center_horizontal"
+                android:text="Year"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/title_dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:gravity="center_horizontal"
+                android:text="Select Dates"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_startDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="Start Date"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_cal"
+                        android:drawableTint="@color/color_filter_selected"
+                        android:gravity="center_horizontal"
+                        android:text="19-01-2020"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@color/colorGrey" />
+
+                <LinearLayout
+                    android:id="@+id/ll_endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="End Date"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_cal"
+                        android:drawableTint="@color/color_filter_selected"
+                        android:gravity="center_horizontal"
+                        android:text="19-01-2020"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/drawable_apply_rounded_filter"
+        android:text="APPLY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_size_16" />
+</RelativeLayout>

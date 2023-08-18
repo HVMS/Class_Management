@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dimen_8"
+            android:text="Assign Access"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_dimen_20"
+            app:font_type="medium"
+            />
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/str_cancel"
+            android:textColor="@color/colorGrey"
+            android:textSize="16sp"
+            app:font_type="regular" />
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_above="@+id/btn_save"
+        android:layout_below="@+id/rl_header_container"
+        android:id="@+id/rv_assign_access"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.globalitians.employees.customviews.CustomButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/drawable_rounded_course"
+        android:text="SAVE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_size_18" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.globalitians.employees.customviews.CustomTextView
+        android:id="@+id/tv_weekname"
+        app:font_type="medium"
+        tools:text="Sun"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/font_dimen_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.globalitians.employees.customviews.CustomCheckBox
+            tools:text="01"
+            android:checked="true"
+            android:textColor="@color/color_selector_day"
+            android:button="@null"
+            app:font_type="bold"
+            android:id="@+id/cbDay"
+            android:background="@drawable/drawable_day_selector"
+            android:textSize="@dimen/font_dimen_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

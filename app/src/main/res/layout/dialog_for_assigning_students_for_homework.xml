@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/top_left_right_bk"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rel_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/simple_bk"
+        android:padding="@dimen/dimen_5">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_student_name"
+            style="@style/tv_input_title"
+            app:font_type="medium"
+            android:textColor="@color/colorBlackLight"
+            android:textSize="@dimen/font_dimen_18"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_45"
+            android:text="Select Student"/>
+
+        <CheckBox
+            android:id="@+id/chkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:checked="false"
+            android:textColor="@color/colorBlackLight"
+            android:buttonTint="@color/colorBlackLight"
+            android:text="All"
+            android:layoutDirection="rtl"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_25">
+        </CheckBox>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_students"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_outer"
+        android:layout_above="@+id/linear"
+        android:padding="@dimen/dimen_5"
+        android:layout_margin="@dimen/dimen_5">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/assign_students_homework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_left_to_right">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Cancel"
+                android:textSize="@dimen/font_size_18"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:background="@drawable/cancel_btn"
+                android:layout_margin="@dimen/dimen_5"
+                android:padding="@dimen/dimen_5">
+            </Button>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/assign_students_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assign"
+                android:textSize="@dimen/font_size_18"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:padding="@dimen/dimen_5"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/edit_btn_bk">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

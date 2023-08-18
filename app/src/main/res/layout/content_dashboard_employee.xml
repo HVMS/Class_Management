@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".dashboard.activities.DashboardEmployeeActivity"
+        tools:showIn="@layout/app_bar_dashboard_employee">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_show_my_id">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_bk_home" />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_margin="@dimen/dimen_10"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/iv_logo"
+                    android:layout_width="@dimen/dimen_100"
+                    android:layout_height="@dimen/dimen_100"
+                    android:src="@drawable/ic_app_globalit_icon" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_student_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@android:color/transparent"
+                    android:layoutAnimation="@anim/layout_animation_up_to_down"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relFab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackAlpha"
+        android:clickable="true"
+        android:layoutAnimation="@anim/layout_animation_down_to_up"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/size_80"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linContainerFabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_course"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddNewCourse"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabInquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvInquiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_inquiry"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddNewInquiry"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_student"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddNewStudent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_branch"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddNewBranch"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddFees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddFees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddFees"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddFaculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddFaculty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddFaculty"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddEmployee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddEmployee"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddBatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddBatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddBatch"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddTest"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFabAddHomeWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvAddHomeWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_vector_add_fees"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:text="@string/strAddHomeWork"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorTextDrawer"
+                    android:textSize="@dimen/font_dimen_16"
+                    android:textStyle="normal"
+                    app:font_type="medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_10"
+        app:cardElevation="@dimen/dimen_3"
+        android:layout_margin="@dimen/dimen_3"
+        app:cardBackgroundColor="#fff"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/rel_attendance_list_item"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content">
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_batch_name"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                tools:text="Batch Name"
+                android:layout_margin="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/colorBlackAlpha">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <!--<com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_batch_date"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                android:text="Date : "
+                android:textColor="@color/colorBlackAlpha"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_below="@+id/tv_batch_name">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_batch_actual_date"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                tools:text="19-02-2020"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_below="@+id/tv_batch_name"
+                android:layout_toRightOf="@+id/tv_batch_date"
+                android:textColor="@color/colorBlackAlpha"
+                android:textSize="@dimen/font_size_16">
+            </com.globalitians.employees.customviews.CustomTextView>-->
+
+            <com.globalitians.employees.customviews.CustomTextView
+                style="@style/tv_input_title"
+                android:textColor="@color/colorBlackAlpha"
+                app:font_type="medium"
+                android:textSize="@dimen/font_size_16"
+                android:layout_below="@+id/tv_batch_name"
+                android:id="@+id/tv_batch_alias_name"
+                android:text="Alias name : "
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackAlpha"
+                app:font_type="medium"
+                android:textSize="@dimen/font_size_16"
+                android:id="@+id/tv_batch_alias_actual_name"
+                android:layout_toRightOf="@+id/tv_batch_alias_name"
+                android:layout_below="@+id/tv_batch_name"
+                android:hint="batch 2020"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <!--<view
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dimen_50"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_50"
+                android:background="@color/darkGrey">
+            </view>-->
+
+            <com.globalitians.employees.customviews.CustomTextView
+                style="@style/tv_input_title"
+                android:id="@+id/tv_attendance_status"
+                android:textColor="@color/colorBlackLight"
+                android:layout_alignParentRight="true"
+                android:hint="Taken"
+                android:padding="@dimen/dimen_5"
+                android:layout_margin="@dimen/dimen_5"
+                android:textStyle="bold"
+                app:font_type="medium"
+                android:textSize="@dimen/font_dimen_16">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

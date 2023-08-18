@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tvSelectBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="Showing Results For: "
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_size_16"
+            app:font_type="medium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tvBranchValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_toLeftOf="@+id/btnChangeBranch"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:text="Odhav"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16"
+                app:font_type="medium" />
+
+            <com.globalitians.employees.customviews.CustomButton
+                android:id="@+id/btnChangeBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Change"
+                android:textAllCaps="false"
+                app:font_type="medium" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tvTurnOffVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Turn Off Action Speech"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_size_16"
+            app:font_type="medium" />
+
+        <Switch
+            android:id="@+id/switchVoiceOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/colorBlack" />
+
+    <com.globalitians.employees.customviews.CustomTextView
+        android:id="@+id/tvLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_logout"
+        android:drawablePadding="@dimen/size_10"
+        android:drawableTint="@color/colorRed_900"
+        android:padding="@dimen/size_10"
+        android:text="Logout"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/font_size_16"
+        android:textStyle="bold"
+        app:font_type="medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/colorBlack" />
+
+</LinearLayout>

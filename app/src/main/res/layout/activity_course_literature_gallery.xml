@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <FrameLayout
+        android:id="@+id/frame_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_course_literature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite" />
+
+        <android.support.design.widget.TabLayout
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:id="@+id/tabDots"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_48"
+            android:layout_gravity="bottom"
+            app:tabBackground="@drawable/circle_tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.globalitians.employees.customviews.CustomTextView
+        app:font_type="medium"
+        android:layout_marginTop="@dimen/dimen_150"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        tools:text="AMOUNT"
+        android:textSize="@dimen/font_size_24"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

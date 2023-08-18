@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#fff"
+            app:cardElevation="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_5"
+            android:layout_margin="@dimen/dimen_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5">
+
+                <com.globalitians.employees.utility.CircularImageView
+                    android:id="@+id/iv_student"
+                    android:layout_width="@dimen/dimen_55"
+                    android:layout_height="@dimen/dimen_55"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:src="@drawable/ic_user_round">
+                </com.globalitians.employees.utility.CircularImageView>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:id="@+id/tv_student_name"
+                    android:textSize="@dimen/font_size_18"
+                    android:layout_toRightOf="@+id/iv_student"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Harsh Kachhadia"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen_5">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:id="@+id/tv_in"
+                    android:textSize="@dimen/font_dimen_14"
+                    android:layout_below="@+id/tv_student_name"
+                    android:layout_toRightOf="@+id/iv_student"
+                    android:text="IN"
+                    android:textColor="@color/my_green"
+                    android:layout_marginLeft="@dimen/dimen_5">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:id="@+id/tv_student_in_time"
+                    android:textSize="@dimen/font_dimen_14"
+                    android:textColor="#464646"
+                    android:layout_below="@+id/tv_student_name"
+                    android:layout_toRightOf="@+id/tv_in"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:text="@string/strSampleTime">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="@dimen/dimen_60"
+                    android:background="@color/darkGrey"
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_toLeftOf="@+id/tv_student_attendance_status"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_5">
+                </View>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:id="@+id/tv_student_attendance_status"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_centerVertical="true"
+                    android:text="Present">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

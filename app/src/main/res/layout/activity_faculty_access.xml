@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size_5"
+    android:background="@drawable/faculty_access_bk"
+    tools:context="com.globalitians.employees.batches.activities.FacultyAccessActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_outer">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_500"
+                android:layout_margin="@dimen/dimen_5">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_faculty_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:layoutAnimation="@anim/layout_animation_left_to_right">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ASSIGNBTN"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:background="@drawable/batch_btn_bk"
+        android:padding="@dimen/dimen_10"
+        android:text="Assign"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_dimen_18">
+    </Button>
+
+</RelativeLayout>

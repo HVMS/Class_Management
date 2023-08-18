@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.globalitians.employees">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".utility.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_globalit_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".test.activity.AddTestActivity"
+            android:label="Add New Test"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".batches.activities.AssignStudentActivity"
+            android:label="Student Access"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".batches.activities.FacultyAccessActivity"
+            android:label="Faculty Access"
+            android:screenOrientation="portrait" />
+        <activity android:name=".employee.activities.EmployeeDetailsActivity" />
+        <activity android:name=".faculty.activities.FacultyDetailsActivity" />
+        <activity
+            android:name=".employee.activities.EmployeeListActivity"
+            android:label="Employees"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".employee.activities.AddEmployeeActivity"
+            android:label="Add Employee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".batches.activities.BatchDetailsActivity"
+            android:label="Batch Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".batches.activities.BatchListActivity"
+            android:label="Batches"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".faculty.activities.AddNewFacultyActivity"
+            android:label="Add Faculty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".batches.activities.AddNewBatchActivity"
+            android:label="Create Batch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.activities.FacultyListActivity"
+            android:label="Faculties"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".other.activities.LauncherActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".employee.activities.EmployeeLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".students.activities.StudentListActivity"
+            android:label="Students"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dashboard.activities.DashboardEmployeeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".employee.activities.EmployeeProfileActivity"
+            android:label="My Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activities.AddCourseActivity"
+            android:label="Add New Course"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photogallery.activities.PhotoGalleryActivity"
+            android:label="Photo Gallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activities.CourseListActivity"
+            android:label="Courses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activities.CourseDetailsActivity"
+            android:label="Course details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activities.CourseLiteratureActivity"
+            android:label="Course Literature"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".attendence.activities.TakeStudentAttendenceActivity"
+            android:label="GIT Scanner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inquiry.activities.InquiryListActivity"
+            android:label="Inquiries"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inquiry.activities.AddInquiryActivity"
+            android:label="Add New Inquiry"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".students.activities.StudentListTabbedActivity"
+            android:label="Global IT - Students"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".students.activities.StudentDetailsActivity"
+            android:label="GIT - Student Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".branches.activities.BranchListActivity"
+            android:label="Global IT - Branches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".other.activities.HowToUseActivity"
+            android:label="How to Use ?"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inquiry.activities.InquiryDetailsActivity"
+            android:label="GIT - Inquiry Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".students.activities.AddStudentActivity"
+            android:label="Add New Student"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".attendence.activities.TakeManualAttendanceActivity"
+            android:label="GIT-Attendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".attendence.activities.NewAttendanceListActivity"
+            android:label="Attendance Report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".attendence.activities.AttendanceListActivity"
+            android:label="Attendance Report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".other.activities.AppSettingsActivity"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments.activities.FeesHistoryListActivity"
+            android:label="Payment/Fees History"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments.activities.AddStudentFeesActivity"
+            android:label="Add Fees"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments.activities.PaymentListTabbedActivity"
+            android:label="Payments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Homework.activity.AddHomeWorkActivity"
+            android:label="Add HomeWork"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Homework.activity.HomeworkListActivity"
+            android:label="HomeWork"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Homework.activity.HomeWorkDetailsActivity"
+            android:label="HomeWork Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".payments.activities.AllFeesListActivity" />
+        <activity
+            android:name=".test.activity.TestListActivity"
+            android:label="Tests"
+            android:screenOrientation="portrait" />
+        <activity android:name=".other.TempBottomSheetActivity" />
+        <activity android:name=".TempActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <activity
+            android:name=".multiple_attendance.activities.MultipleStudentsListDateWiseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".multiple_attendance.activities.MultiplePieChartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".multiple_attendance.activities.MultipleBatchWiseAttendanceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".multiple_attendance.activities.MultipleAttendanceDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".multiple_attendance.activities.MultipleMyNewStudentAttendanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".multiple_attendance.activities.MultipleBatchWiseAttedanceReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

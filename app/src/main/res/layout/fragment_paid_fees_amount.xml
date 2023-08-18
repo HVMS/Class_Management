@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/lin_header"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@drawable/drawable_payment_rounded_button"
+        android:padding="@dimen/dimen_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/font_dimen_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/colorWhite"
+            app:font_type="bold" />
+        <com.globalitians.employees.customviews.CustomTextView
+            android:gravity="center"
+            android:textSize="@dimen/font_dimen_18"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textColor="@color/colorWhite"
+            app:font_type="bold" />
+        <com.globalitians.employees.customviews.CustomTextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_dimen_18"
+            android:text="Mode"
+            android:textColor="@color/colorWhite"
+            app:font_type="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_below="@+id/lin_header"
+        android:id="@+id/rv_student_fees_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.globalitians.employees.customviews.CustomTextView
+        app:font_type="medium"
+        android:layout_marginTop="@dimen/dimen_150"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        tools:text="AMOUNT"
+        android:textSize="@dimen/font_size_24"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/tvPaidAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

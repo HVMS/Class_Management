@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_300"
+    android:layout_height="@dimen/size_450"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_corner_white"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/linHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            app:font_type="medium"
+            android:id="@+id/tvAddedCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/size_10"
+            android:gravity="center"
+            android:text="@string/strAddedCourses"
+            android:textColor="@color/colorStudentTheme"
+            android:textSize="@dimen/font_size_18"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/colorStudentTheme" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linHeader"
+        android:padding="@dimen/size_10">
+        <ListView
+            android:id="@+id/lv_courses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_okay"
+            android:layout_marginTop="@dimen/size_5"
+            android:layout_marginBottom="@dimen/size_5"
+            android:layoutAnimation="@anim/layout_animation_left_to_right"
+            />
+
+        <com.globalitians.employees.customviews.CustomTextView
+            app:font_type="medium"
+            android:id="@+id/tv_okay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/drawable_add_view_course"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/size_10"
+            android:text="@string/strOkay"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_16" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            style="@style/tv_input_title"
+            android:id="@+id/tv_batch_name"
+            tools:text="Physics Name"
+            app:font_type="medium"
+            android:textColor="@color/colorBlackLight"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_18"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_2">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+        <com.globalitians.employees.customviews.CustomTextView
+            style="@style/tv_input_title"
+            android:id="@+id/tv_batch_alias_name"
+            tools:text="Alias Name"
+            android:textColor="@color/colorBlackLight"
+            android:textSize="@dimen/font_size_14"
+            android:layout_below="@+id/tv_batch_name"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_2"
+            android:textStyle="normal">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:alpha="0.60"
+            android:layout_below="@+id/tv_batch_alias_name"
+            android:background="@color/my_green"
+            android:layout_marginRight="@dimen/dimen_3"
+            android:layout_marginLeft="@dimen/dimen_3">
+        </View>
+
+    </RelativeLayout>
+
+</RelativeLayout>

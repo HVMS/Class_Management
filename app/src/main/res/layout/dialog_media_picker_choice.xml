@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_310"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@color/colorBlack"
+        android:textSize="@dimen/font_size_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/size_10"
+        android:text="Course Image/PDF"
+        android:gravity="center"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:textSize="@dimen/font_size_16"
+        android:id="@+id/tv_post_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/size_10"
+        android:text="@string/strPostPhoto"
+        android:textColor="@color/colorBlack" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/colorGrey" />
+
+    <TextView
+        android:textSize="@dimen/font_size_16"
+        android:id="@+id/tv_post_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/size_10"
+        android:text="@string/strPostCoursePdf"
+        android:textColor="@color/colorBlack" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/colorGrey" />
+
+    <TextView
+        android:textSize="@dimen/font_size_16"
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/size_10"
+        android:text="@string/strCancel"
+        android:textColor="@color/colorGrey" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_xml_11"
+    tools:context="com.globalitians.employees.homework.AssignHomeworkToStudents">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorWhite"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_55"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_5">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_student_name"
+            style="@style/tv_input_title"
+            app:font_type="medium"
+            android:textColor="@color/colorTextDrawer"
+            android:textSize="@dimen/font_dimen_18"
+            android:layout_marginLeft="@dimen/dimen_75"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="Student Name">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+        <CheckBox
+            android:id="@+id/chkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_28"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:checked="false"
+            android:buttonTint="#4ecca3"
+            android:text="All"
+            android:layoutDirection="rtl">
+        </CheckBox>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_top_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_5"
+                app:cardElevation="@dimen/dimen_3"
+                app:cardBackgroundColor="#fff"
+                android:layout_margin="@dimen/dimen_5"
+                android:layout_below="@+id/tv_student_name"
+                android:layout_above="@+id/ASSIGNBTN">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_5">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/assign_students_homework"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation_left_to_right">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/ASSIGNBTN"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/edit_btn_bk"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="Assign Students"
+            android:textSize="@dimen/font_dimen_18"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold">
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

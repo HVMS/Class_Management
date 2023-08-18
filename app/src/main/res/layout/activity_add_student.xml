@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_student_background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_add_new_student"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/linAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_10"
+            android:orientation="vertical">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_student_image_pick"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/size_20"
+                android:layout_marginRight="@dimen/size_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pick_camera" />
+
+            <LinearLayout
+                android:id="@+id/lin_personal_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_50"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_8"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_20">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:text="@string/strPassword"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_password"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strPassword"
+                                android:maxLength="12"
+                                android:inputType="textPassword"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strConfirmPassword"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_conf_password"
+                                android:maxLength="12"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strConfirmPassword"
+                                android:inputType="textPassword"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_8"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_20">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:id="@+id/tv_student_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:ellipsize="end"
+                                android:hint="Username"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:text="Personal Details"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_20"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strFirstname"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_firstname"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strFirstname"
+                                android:inputType="textPersonName"
+                                android:maxLength="30"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strLastname"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_lastname"
+                                android:maxLength="30"
+                                style="@style/edt_input"
+                                android:inputType="textPersonName"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strLastname"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strMobileNo"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_mobileno"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strMobileNo"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:layout_height="wrap_content"
+                                android:text="@string/strEmail"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_email"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strEmail"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strBirthDate"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_birthDate"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:focusable="false"
+                                android:hint="@string/strBirthDate"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_8"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_20">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:ellipsize="end"
+                                android:hint="Username"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:text="Parent's Details"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_20"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strParentName"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_parentname"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strParentName"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strParentMobile"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_parent_mobileno"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strParentMobile"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strAddress"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_address"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:hint="@string/strAddress"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Standatd Details-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_8"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_20">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:text="Standard Details"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_20"
+                                app:font_type="medium" />
+
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:text="@string/strSelectStandard"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                style="@style/edt_input"
+                                android:id="@+id/spinner_standard"
+                                android:layout_width="@dimen/size_200"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:entries="@array/arr_standards"
+                                android:text="@string/strView"
+                                android:textSize="@dimen/size_16" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:id="@+id/tvStream"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:text="@string/strSelectStream"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                android:id="@+id/spinner_stream"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:entries="@array/arr_streams"
+                                android:focusable="false"
+                                android:textSize="@dimen/font_dimen_16" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strSelectSubject"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                android:id="@+id/spinner_subject"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:focusable="false"
+                                android:hint="@string/strJoiningDate"
+                                android:textSize="@dimen/font_dimen_16" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--end-->
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_8"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_20">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:ellipsize="end"
+                                android:hint="Username"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:text="Course Details"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_20"
+                                app:font_type="medium" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.globalitians.employees.customviews.CustomTextView
+                                    android:id="@+id/tv_add_new"
+                                    android:layout_width="@dimen/size_200"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/size_5"
+                                    android:layout_marginRight="@dimen/size_2"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/drawable_add_view_course"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dimen_8"
+                                    android:text="@string/strAddNew"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/size_16"
+                                    app:font_type="medium" />
+
+                                <com.globalitians.employees.customviews.CustomTextView
+                                    android:id="@+id/tv_view_student_courses"
+                                    android:layout_width="@dimen/size_200"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="@dimen/size_2"
+                                    android:layout_marginTop="@dimen/size_5"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/drawable_add_view_course"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dimen_8"
+                                    android:text="@string/strView"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/size_16"
+                                    app:font_type="medium" />
+
+                            </LinearLayout>
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:text="@string/strInstallmentDate"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_installmentDate"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:focusable="false"
+                                android:hint="@string/strInstallmentDate"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strJoiningDate"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomEditText
+                                android:id="@+id/edt_joiningDate"
+                                style="@style/edt_input"
+                                android:background="@drawable/drawable_edittext_login"
+                                android:focusable="false"
+                                android:hint="@string/strJoiningDate"
+                                android:textSize="@dimen/font_dimen_16"
+                                app:font_type="medium" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strReferenceBy"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_dimen_18"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                android:id="@+id/spinner_referenceBy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/size_10"
+                                android:background="@drawable/background_white_square"
+                                android:entries="@array/array_referenceBy"
+                                android:padding="@dimen/size_10">
+                            </Spinner>
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strBranch"
+                                android:textSize="@dimen/font_dimen_18"
+                                android:visibility="gone"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                android:id="@+id/spinner_branch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/size_10"
+                                android:background="@drawable/background_white_square"
+                                android:entries="@array/array_branches"
+                                android:padding="@dimen/size_5"
+                                android:visibility="gone">
+                            </Spinner>
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                style="@style/tv_input_title"
+                                android:text="@string/strPartnername"
+                                android:textSize="@dimen/font_dimen_18"
+                                android:visibility="visible"
+                                android:textColor="@color/colorTextDrawer"
+                                app:font_type="medium" />
+
+                            <Spinner
+                                android:id="@+id/spinner_partner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:background="@drawable/background_white_square"
+                                android:visibility="visible"
+                                android:entries="@array/array_partners">
+                            </Spinner>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.globalitians.employees.customviews.CustomTextView
+        android:id="@+id/tv_add_new_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@drawable/drawable_rounded_student"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10"
+        android:text="@string/strSubmit"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size_18"
+        app:font_type="medium" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_5"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_5">
+
+    <com.globalitians.employees.customviews.CustomCheckBox
+        android:id="@+id/cb_access_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Access Items"
+        android:textSize="@dimen/font_dimen_16"
+        app:font_type="medium" />
+</RelativeLayout>

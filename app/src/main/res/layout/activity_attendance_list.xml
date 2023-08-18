@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_background_inquiry_list" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linAttendaceListDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/relStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5"
+                    android:background="@drawable/drawable_border_round"
+                    android:layoutAnimation="@anim/layout_animation_left_to_right"
+                    android:padding="@dimen/size_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivStudentFilterBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/ic_back_left_filter"
+                        android:tint="@color/colorBlack" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterApliedValueStudent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:layout_toLeftOf="@+id/ivClearFilterStudent"
+                        android:layout_toRightOf="@+id/ivStudentFilterBack"
+                        android:ellipsize="end"
+                        android:hint="Filter By"
+                        android:maxLines="2"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+                    <ImageView
+                        android:id="@+id/ivClearFilterStudent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:src="@drawable/ic_close" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relFilterCriteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5"
+                    android:background="@drawable/drawable_border_round"
+                    android:layoutAnimation="@anim/layout_animation_left_to_right"
+                    android:padding="@dimen/size_10"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivFilterleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/ic_filter"
+                        android:tint="@color/colorBlack" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterApliedValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:layout_toLeftOf="@+id/ivClearFilter"
+                        android:layout_toRightOf="@+id/ivFilterleft"
+                        android:ellipsize="end"
+                        android:hint="Filter By"
+                        android:maxLines="2"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+                    <ImageView
+                        android:id="@+id/ivClearFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:src="@drawable/ic_close" />
+                </RelativeLayout>
+
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeToRefreshAttendanceList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_attendance_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relFab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackAlpha"
+            android:clickable="true"
+            android:layoutAnimation="@anim/layout_animation_down_to_up"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size_80"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/linContainerFabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutFabFilterOutRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterOutRequired"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:background="@drawable/drawable_vector_add_student"
+                        android:clickable="false"
+                        android:ems="11"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:text="@string/strOutRequired"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFabFilterByDates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterByDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_vector_add_branch"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:paddingLeft="@dimen/dimen_20"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:text="@string/strFilterByDate"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFabFilterBetweenDates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterBetweenDates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_vector_add_branch"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:paddingLeft="@dimen/dimen_20"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:text="@string/strFilterBetweenDates"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFabFilterByMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterByMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_vector_add_branch"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:paddingLeft="@dimen/dimen_20"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:text="@string/strFilterByMonthYear"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFabFilterByYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tvFilterByYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_vector_add_branch"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:paddingLeft="@dimen/dimen_20"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:text="@string/strFilterByYear"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_16"
+                        app:font_type="medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.globalitians.employees.customviews.CustomTextView
+            app:font_type="medium"
+            android:id="@+id/tvNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_100"
+            android:text="@string/strNoDataFound"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/font_size_18"
+            android:visibility="gone" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabFilterAttendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_filter"
+            android:tint="@color/colorWhite"
+            app:backgroundTint="@color/colorAttendanceListTheme" />
+    </FrameLayout>
+</RelativeLayout>

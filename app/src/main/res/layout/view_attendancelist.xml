@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linMainContainer"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:layout_height="@dimen/dimen_100"
+    android:clickable="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:id="@+id/relContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/size_8">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size_10"
+                android:background="@drawable/ic_profile_placeholder_dashboard"
+                android:focusable="false"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/dimen_1" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_toLeftOf="@+id/linStatus"
+                android:layout_toRightOf="@+id/iv_user"
+                android:orientation="vertical">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_student_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="Username"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Username"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_size_18"
+                    app:font_type="medium" />
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_2"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorAttendanceListTheme"
+                    android:textSize="@dimen/font_size_14"
+                    app:font_type="medium"
+                    tools:text="datetime" />
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_2"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_size_14"
+                    app:font_type="regular"
+                    tools:text="datetime" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/iv_nav"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="@dimen/size_0"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:tint="@color/colorBlack" />
+            <View
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linStatus"
+                android:layout_width="1dp"
+                android:alpha="0.25"
+                android:layout_height="match_parent"
+                android:background="@color/colorTextDrawer"
+                />
+            <LinearLayout
+                android:id="@+id/linStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_nav"
+                android:orientation="vertical">
+
+                <!--  <TextView
+                      android:clickable="true"
+                      android:id="@+id/tv_out"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:ellipsize="end"
+                      android:lines="1"
+                      android:paddingLeft="@dimen/size_15"
+                      android:paddingTop="@dimen/size_5"
+                      android:paddingRight="@dimen/size_15"
+                      android:paddingBottom="@dimen/size_5"
+                      android:singleLine="true"
+                      android:text="Make Out"
+                      android:textColor="@color/colorRed"
+                      android:textSize="@dimen/font_size_14"
+                      android:textStyle="bold"
+                      android:visibility="visible" />
+
+                  <TextView
+                      android:id="@+id/tv_attendance_status"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:ellipsize="end"
+                      android:lines="1"
+                      android:paddingLeft="@dimen/size_15"
+                      android:paddingTop="@dimen/size_5"
+                      android:paddingRight="@dimen/size_15"
+                      android:paddingBottom="@dimen/size_5"
+                      android:singleLine="true"
+                      android:text="Present"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:textSize="@dimen/font_size_14"
+                      android:textStyle="bold" />-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="In    "
+                        android:textColor="@color/colorInTitle"
+                        android:textSize="@dimen/font_size_16"
+                        app:font_type="medium" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_intime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="@dimen/font_size_12"
+                        app:font_type="medium"
+                        tools:text="datetime" />
+                </LinearLayout>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_make_out"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimen_6"
+                    android:paddingTop="@dimen/dimen_6"
+                    android:paddingRight="@dimen/dimen_6"
+                    android:paddingLeft="@dimen/dimen_6"
+                    android:background="@drawable/drawable_make_out"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Make Out"
+                    android:textColor="@color/colorOutTitle"
+                    android:textSize="@dimen/font_size_12"
+                    app:font_type="medium" />
+
+                <LinearLayout
+                    android:id="@+id/linOutRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Out"
+                        android:textColor="@color/colorOutTitle"
+                        android:textSize="@dimen/font_size_16"
+                        app:font_type="medium" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_outtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="@dimen/font_size_12"
+                        app:font_type="medium"
+                        tools:text="datetime" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_300"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/drawable_border_round"
+    android:layout_height="@dimen/size_450">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@drawable/ic_student_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@drawable/drawable_black_rounded_header"
+                android:id="@+id/linHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    app:font_type="medium"
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/size_10"
+                    android:gravity="center"
+                    android:text="@string/strStudentCourseDetails"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_size_20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linBottom"
+                android:layout_below="@+id/linHeader"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fillViewport="true"
+                android:padding="@dimen/size_10">
+
+                <LinearLayout
+                    android:id="@+id/lin_course_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_10">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_courses"
+                        android:layout_width="wrap_content"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strCources"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.globalitians.employees.customviews.CustomEditText
+                        app:font_type="medium"
+                        android:id="@+id/edt_course_name"
+                        style="@style/edt_input"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="@string/strCourse" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_course_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strDuration"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.globalitians.employees.customviews.CustomEditText
+                        app:font_type="medium"
+                        android:id="@+id/edt_course_duration"
+                        style="@style/edt_input"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="@string/strDuration" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strStudentCourseStatus"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <Spinner
+                        android:id="@+id/spinner_course_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:background="@drawable/background_white_square"
+                        android:entries="@array/course_status"
+                        android:padding="@dimen/size_10"></Spinner>
+
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strStudentCertificate"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <Spinner
+                        android:id="@+id/spinner_certificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:background="@drawable/background_white_square"
+                        android:entries="@array/array_yes_no"
+                        android:padding="@dimen/size_10"></Spinner>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        app:font_type="medium"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strBookMaterial"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <Spinner
+                        android:id="@+id/spinner_book_material"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:background="@drawable/background_white_square"
+                        android:entries="@array/array_yes_no"
+                        android:padding="@dimen/size_10"></Spinner>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        app:font_type="medium"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strBag"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:background="@drawable/background_white_square"
+                        android:entries="@array/array_yes_no"
+                        android:padding="@dimen/size_10"></Spinner>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_course_fees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:text="@string/strFees"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_fees_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:orientation="horizontal">
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            android:id="@+id/tv_decrease_fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:background="@drawable/rounded_corner_black"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/size_9"
+                            android:paddingTop="@dimen/size_2"
+                            android:paddingRight="@dimen/size_9"
+                            android:paddingBottom="@dimen/size_2"
+                            android:text="-"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font_size_18"
+                            android:textStyle="bold" />
+
+                        <com.globalitians.employees.customviews.CustomEditText
+                            app:font_type="medium"
+                            android:id="@+id/edtCoursefees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:background="@drawable/background_white_square"
+                            android:gravity="center_vertical"
+                            android:hint="fees amount Rs."
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:padding="@dimen/size_5"
+                            android:singleLine="true"
+                            android:text="3000"
+                            android:textAlignment="center" />
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            android:id="@+id/tv_increase_fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:background="@drawable/rounded_corner_black"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/size_7"
+                            android:paddingTop="@dimen/size_2"
+                            android:paddingRight="@dimen/size_7"
+                            android:paddingBottom="@dimen/size_2"
+                            android:text="+"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font_size_18" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/linBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_1"
+                    android:background="@color/colorStudentTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size_10">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_submit"
+                        android:layout_width="@dimen/size_200"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:layout_marginRight="@dimen/size_2"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_add_view_course"
+                        android:gravity="center"
+                        app:font_type="medium"
+                        android:padding="@dimen/dimen_8"
+                        android:text="@string/strSubmit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/size_16" />
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_cancel"
+                        android:layout_width="@dimen/size_200"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:layout_weight="1"
+                        app:font_type="medium"
+                        android:background="@drawable/drawable_add_view_course"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_8"
+                        android:text="@string/strCancel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/size_16" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_my_attendence"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/linScanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtBarcodeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#000"
+            android:padding="10dp"
+            android:text="Scan Student ID Card"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvScanAttendance"
+        android:textSize="@dimen/font_size_18"
+        android:padding="@dimen/size_15"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_black"
+        android:text="Scan Now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

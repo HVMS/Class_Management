@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dimen_8"
+            android:text="Test Details"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_dimen_20"
+            app:font_type="bold" />
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/str_cancel"
+            android:textColor="@color/colorGrey"
+            android:textSize="16sp"
+            app:font_type="regular" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_test_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header_container"
+        android:layout_margin="@dimen/dimen_10"
+        app:cardElevation="@dimen/dimen_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8">
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_test_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_dimen_18"
+                app:font_type="bold"
+                tools:text="Android Basics" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_test_name"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_toLeftOf="@+id/ll_datetime_container"
+                android:orientation="vertical">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_batch_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium"
+                    tools:text="Batch Android - 2020" />
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_total_marks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="medium"
+                    tools:text="Total Marks: 100" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_datetime_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_test_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="vertical">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_test_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_dimen_14"
+                    app:font_type="medium"
+                    tools:text="Date: 20/02/2020" />
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_test_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_dimen_14"
+                    app:font_type="medium"
+                    tools:text="Time: 12:00 PM" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_students_marks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_test_details"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10" />
+
+    <com.globalitians.employees.customviews.CustomTextView
+        android:id="@+id/tv_no_marks_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/font_dimen_20"
+        android:visibility="gone"
+        app:font_type="medium"
+        tools:text="@string/strNoMarksAddedYet" />
+</RelativeLayout>

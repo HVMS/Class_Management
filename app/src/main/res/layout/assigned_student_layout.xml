@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.globalitians.employees.utility.CircularImageView
+            android:id="@+id/iv_student"
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_45"
+            android:src="@drawable/ic_user_round"
+            android:layout_margin="@dimen/dimen_5"
+            android:layout_centerHorizontal="true">
+        </com.globalitians.employees.utility.CircularImageView>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:src="@drawable/cancel_24px"
+            android:layout_alignRight="@+id/iv_student"
+            android:layout_alignBottom="@+id/iv_student">
+        </ImageView>
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_actual_student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atul Prajapati"
+            app:font_type="medium"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_below="@+id/iv_student"
+            android:textColor="@color/colorBlackLight"
+            android:textSize="@dimen/font_size_14"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="550dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_above="@+id/btn_apply_course_month_filter"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_close_student_type_filter"
+                android:padding="@dimen/size_15"
+                android:text="Choose Month"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_size_16" />
+
+            <ImageView
+                android:id="@+id/iv_close_student_type_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/size_15"
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorBlack" />
+
+            <TextView
+                android:enabled="false"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_clear_course_student_type_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/size_15"
+                android:text="CLEAR"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/colorGrey" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_total_selected_months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_10"
+            android:textColor="@color/colorThemeBlue"
+            tools:text="Total Months Selected : 8" />
+
+        <ListView
+            android:id="@+id/lv_filter_course_months"
+            android:layout_width="350dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_apply_course_month_filter"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGrey"
+        android:padding="@dimen/size_10"
+        android:text="@string/strApply"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_5"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_5">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardElevation="@dimen/dimen_3">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_1">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:id="@+id/relAccessModule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:layout_toLeftOf="@+id/switch_module_access"
+                    android:id="@+id/tv_access_module_name"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_5"
+                    android:text="Student"
+                    android:textColor="@color/colorCourseTheme"
+                    android:textSize="@dimen/font_dimen_16"
+                    app:font_type="bold" />
+
+                <Switch
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:thumbTint="@color/colorCourseTheme"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/switch_module_access"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relAccessModule"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_access_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#111111</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+        <item name="android:windowDisablePreview">true</item>
+        <!--To make the Bottom sheet Rounded-->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!--To change back arrow color Arrow color to black-->
+        <!--<item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>-->
+    </style>
+   <!-- <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/colorBlack</item>
+    </style>-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet_rounded_dialog</item>
+    </style>
+
+    <style name="edt_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_marginBottom">@dimen/size_10</item>
+        <item name="android:background">@drawable/background_white_square</item>
+        <item name="android:gravity">top</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">@dimen/size_10</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/size_16</item>
+    </style>
+
+    <style name="tv_input_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/size_5</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="radioBtnAttendance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/size_8</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
+    <!--Style for Gym Falag Dialog-->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <!--
+    android:id="@+id/edt_firstname"
+
+                    android:hint="@string/strFirstname"
+
+    -->
+    <!--
+     <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:text="@string/strFirstname"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_size_14" />
+
+    -->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+    <style name="FullscreenThemeWithoutActionbar" parent="AppTheme">
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SubmitButtonStyleAtBottomOfTheList">
+        <item name="android:elevation">@dimen/dimen_3</item>
+        <item name="android:layout_height">@dimen/toolbar_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginRight">@dimen/dimen_10</item>
+        <item name="android:layout_marginLeft">@dimen/dimen_10</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10</item>
+        <item name="android:background">@drawable/drawable_rounded_button_filled</item>
+        <item name="android:paddingLeft">@dimen/dimen_50</item>
+        <item name="android:paddingRight">@dimen/dimen_50</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dimen_16</item>
+        <item name="font_type">medium</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="mydatestyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+
+    <dimen name="toolbar_height">44dp</dimen>
+</resources>

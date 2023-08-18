@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_background_payment_details" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dimen_40"
+            android:id="@+id/linStudentFeesPaymentDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_80"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/size_10"
+                android:background="@drawable/ic_profile_placeholder_dashboard"
+                android:clickable="false"
+                android:focusable="false"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/dimen_1" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabsFeesPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerFeesPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

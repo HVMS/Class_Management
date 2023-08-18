@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_xml_11"
+    tools:context="com.globalitians.employees.batches.activities.AssignStudentActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_5"
+            app:cardBackgroundColor="#fff"
+            android:layout_margin="@dimen/dimen_5">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_selected_student_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+            </android.support.v7.widget.RecyclerView>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tv_input_title"
+            app:font_type="medium"
+            android:id="@+id/tv_student_name"
+            android:text="Student Name"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlackAlpha"
+            android:padding="@dimen/dimen_5"
+            android:visibility="gone"
+            android:layout_below="@+id/cardview">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+        <TextView
+            android:id="@+id/tv_show_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Batch "
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:textColor="@color/colorBlackLight"
+            android:textSize="@dimen/font_dimen_20"
+            android:gravity="center"
+            android:alpha="0.30"
+            android:visibility="visible"
+            android:layout_below="@+id/iv_extra">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_extra"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_below="@+id/cardview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_200"
+            android:visibility="visible"
+            android:scaleType="fitXY"
+            android:alpha="0.20"
+            android:src="@drawable/take_att_default_image"
+            tools:ignore="NotSibling">
+        </ImageView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabFilterBatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/my_green"
+            android:src="@drawable/ic_filter">
+        </android.support.design.widget.FloatingActionButton>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_below="@+id/cardview"
+            android:visibility="gone"
+            android:layout_above="@+id/btn_save">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_all_student_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="@dimen/dimen_10"
+                android:layoutAnimation="@anim/layout_animation_left_to_right">
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/dimen_150"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Assign"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/edit_btn_bk"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_dimen_18">
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

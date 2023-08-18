@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/multiple_background_xml_10">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorWhite"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <com.globalitians.employees.utility.CircularImageView
+            android:id="@+id/iv_student"
+            android:layout_width="@dimen/dimen_65"
+            android:layout_height="@dimen/dimen_65"
+            android:src="@drawable/ic_user_round"
+            android:layout_centerHorizontal="true"
+            app:civ_border="false"
+            android:layout_below="@+id/lin_batch_list_layout"
+            android:layout_margin="@dimen/dimen_5">
+        </com.globalitians.employees.utility.CircularImageView>
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_student_name"
+            style="@style/tv_input_title"
+            app:font_type="medium"
+            android:textSize="@dimen/font_size_18"
+            android:text="Rohit Sharma"
+            android:textColor="@color/colorBlackLight"
+            android:textStyle="bold"
+            android:layout_below="@+id/iv_student"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_5">
+        </com.globalitians.employees.customviews.CustomTextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dimen_5"
+            app:cardElevation="@dimen/dimen_7"
+            android:layout_margin="@dimen/dimen_5"
+            app:cardBackgroundColor="#fff"
+            android:layout_below="@+id/tv_student_name">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tv_month_wise_report_title"
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:text="@string/strMonthWise"
+                    android:textColor="#898989"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:textSize="@dimen/font_dimen_18">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/select_will_picker"
+                    style="@style/tv_input_title"
+                    app:font_type="medium"
+                    android:textColor="@color/colorWhite"
+                    android:text="Jan 2020"
+                    android:textSize="@dimen/font_dimen_18"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end"
+                    android:background="@drawable/multiple_will_picker_bk"
+                    android:padding="@dimen/dimen_5"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:drawableLeft="@drawable/multiple_icon_month_year">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/select_will_picker">
+                </com.github.mikephil.charting.charts.PieChart>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

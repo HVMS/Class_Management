@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dimen_5">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="@dimen/dimen_5"
+        app:cardElevation="@dimen/dimen_5"
+        android:layout_margin="@dimen/dimen_4">
+
+        <RelativeLayout
+            android:id="@+id/rv_item_list_of_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_student"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:src="@drawable/ic_user_round"
+                android:layout_margin="@dimen/dimen_5">
+            </com.globalitians.employees.utility.CircularImageView>
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_checked"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:src="@drawable/checked_stuednt"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dimen_35"
+                android:layout_marginTop="@dimen/dimen_35">
+            </com.globalitians.employees.utility.CircularImageView>
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font_type="medium"
+                style="@style/tv_input_title"
+                android:layout_marginLeft="@dimen/dimen_65"
+                android:layout_centerVertical="true"
+                android:hint="Student Name"
+                android:textColor="@color/colorBlackLight"
+                android:textSize="@dimen/font_dimen_16"
+                android:textStyle="bold">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <CheckBox
+                android:id="@+id/chkAssign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:visibility="gone"
+                android:buttonTint="#4ecca3">
+            </CheckBox>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

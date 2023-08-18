@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:clickable="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linMainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/linOperations"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_10">
+
+                <com.globalitians.employees.utility.CircularImageView
+                    android:id="@+id/iv_faculty"
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="@dimen/size_60"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:background="@drawable/ic_profile_placeholder_dashboard"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="@dimen/dimen_1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_faculty_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:hint="Username"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:text="Username"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_size_20"
+                        app:font_type="medium" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_more_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size_5"
+                android:padding="@dimen/size_5"
+                android:scaleType="fitXY"
+                android:src="@drawable/more_options"
+                android:tint="@color/colorTextDrawer" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

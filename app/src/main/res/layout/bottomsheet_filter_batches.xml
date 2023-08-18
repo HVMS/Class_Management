@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_rounded_top_bottomsheet"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_10"
+    android:paddingBottom="@dimen/dimen_20">
+
+    <RelativeLayout
+        android:id="@+id/rl_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dimen_8"
+            android:text="Filter Batch"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_dimen_20"
+            app:font_type="medium"
+            />
+
+        <com.globalitians.employees.customviews.CustomTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/str_cancel"
+            android:textColor="@color/colorGrey"
+            android:textSize="16sp"
+            app:font_type="regular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnApplyFilter"
+        android:layout_below="@+id/rl_header_container"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/sv_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:visibility="visible"
+                    android:id="@+id/title_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center_horizontal"
+                    android:text="Select Branch"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_size_16"
+                    app:font_type="medium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10">
+
+                    <RadioGroup
+                        android:visibility="visible"
+                        android:id="@+id/rgBranch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <com.globalitians.employees.customviews.CustomRadioButton
+                            android:textSize="@dimen/font_size_12"
+                            android:id="@+id/rbVastral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_2"
+                            android:layout_weight="1"
+                            android:background="@drawable/drawable_filter_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingTop="@dimen/size_8"
+                            android:paddingRight="@dimen/dimen_20"
+                            android:paddingBottom="@dimen/size_8"
+                            android:text="Vastral"
+                            android:textColor="@drawable/drawable_filter_color_selector"
+                            app:font_type="medium" />
+
+                        <com.globalitians.employees.customviews.CustomRadioButton
+                            android:id="@+id/rbOdhav"
+                            android:textSize="@dimen/font_size_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_2"
+                            android:layout_weight="1"
+                            android:background="@drawable/drawable_filter_selector"
+                            android:button="@null"
+                            android:checked="false"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingTop="@dimen/size_8"
+                            android:paddingRight="@dimen/dimen_20"
+                            android:paddingBottom="@dimen/size_8"
+                            android:text="Odhav"
+                            android:textColor="@drawable/drawable_filter_color_selector"
+                            app:font_type="medium" />
+                    </RadioGroup>
+                </RelativeLayout>
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:visibility="visible"
+                    android:id="@+id/title_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center_horizontal"
+                    android:text="Batch Status"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_size_16"
+                    app:font_type="medium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10">
+
+                    <RadioGroup
+                        android:visibility="visible"
+                        android:id="@+id/rgBatchStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <com.globalitians.employees.customviews.CustomRadioButton
+                            android:textSize="@dimen/font_size_12"
+                            android:id="@+id/rbRunning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_2"
+                            android:layout_weight="1"
+                            android:background="@drawable/drawable_filter_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingTop="@dimen/size_8"
+                            android:paddingRight="@dimen/dimen_20"
+                            android:paddingBottom="@dimen/size_8"
+                            android:text="Running"
+                            android:textColor="@drawable/drawable_filter_color_selector"
+                            app:font_type="medium" />
+
+                        <com.globalitians.employees.customviews.CustomRadioButton
+                            android:id="@+id/rbCompleted"
+                            android:textSize="@dimen/font_size_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_2"
+                            android:layout_weight="1"
+                            android:background="@drawable/drawable_filter_selector"
+                            android:button="@null"
+                            android:checked="false"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingTop="@dimen/size_8"
+                            android:paddingRight="@dimen/dimen_20"
+                            android:paddingBottom="@dimen/size_8"
+                            android:text="Odhav"
+                            android:textColor="@drawable/drawable_filter_color_selector"
+                            app:font_type="medium" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <com.globalitians.employees.customviews.CustomButton
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/drawable_apply_rounded_filter"
+        android:text="APPLY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_size_16" />
+</RelativeLayout>

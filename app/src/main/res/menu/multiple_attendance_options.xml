@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/batch"
+        android:title="Batch">
+    </item>
+
+    <item
+        android:id="@+id/students"
+        android:title="Students">
+    </item>
+
+    <!--<item
+        android:id="@+id/Faculty"
+        android:title="Faculties">
+    </item>
+
+    <item
+        android:id="@+id/Employee"
+        android:title="Employees">
+    </item>-->
+</menu>

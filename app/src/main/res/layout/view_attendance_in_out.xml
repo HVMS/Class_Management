@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <LinearLayout
+        android:background="@drawable/rounded_corner_white"
+        android:layout_margin="@dimen/size_1"
+        android:id="@+id/linMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/linOperations"
+        android:orientation="vertical"
+        android:padding="@dimen/size_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_10"
+            android:orientation="vertical">
+
+            <com.globalitians.employees.utility.CircularImageView
+                android:id="@+id/iv_user"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:background="@drawable/ic_profile_placeholder_dashboard"
+                android:clickable="false"
+                android:focusable="false"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/dimen_1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_toLeftOf="@+id/tv_in_out"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/size_5"
+                android:gravity="center"
+                android:id="@+id/tv_student_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:hint="Username"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="Username"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tv_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:ellipsize="end"
+                android:hint="Username"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_size_14"
+                tools:text="datetime" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linMainContainer"
+        android:background="@color/colorBlack" />
+</RelativeLayout>

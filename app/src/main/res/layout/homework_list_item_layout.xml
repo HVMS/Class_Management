@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_10"
+        app:cardElevation="@dimen/dimen_3"
+        android:layout_margin="@dimen/dimen_7"
+        app:cardBackgroundColor="#fff">
+
+        <RelativeLayout
+            android:id="@+id/rel_homework_list_item"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dimen_4"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content">
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_homework_name"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                tools:text="Home Work Name"
+                android:layout_margin="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/student_primary_color">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_homework_date"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                android:text="Date : "
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_below="@+id/tv_homework_name">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <com.globalitians.employees.customviews.CustomTextView
+                android:id="@+id/tv_homeword_actual_date"
+                style="@style/tv_input_title"
+                app:font_type="medium"
+                tools:text="19-02-2020"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_below="@+id/tv_homework_name"
+                android:layout_toRightOf="@+id/tv_homework_date"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/font_size_16">
+            </com.globalitians.employees.customviews.CustomTextView>
+
+            <ImageView
+                android:id="@+id/iv_remove_hw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_options"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_15">
+            </ImageView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

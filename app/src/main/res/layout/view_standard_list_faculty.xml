@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_standard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:orientation="horizontal">
+
+    <com.globalitians.employees.utility.CircularImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_standard"
+        android:layout_width="@dimen/size_25"
+        android:layout_height="@dimen/size_25" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/chkStandard"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_standard"
+        android:layout_marginLeft="@dimen/size_5"
+        android:textSize="@dimen/font_size_14"
+        android:hint="Course Name"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:id="@+id/tv_standard_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"/>
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_navigation"
+        android:id="@+id/iv_delete_standard"
+        android:layout_width="@dimen/size_35"
+        android:layout_height="@dimen/size_45" />
+    <CheckBox
+        android:layout_alignParentRight="true"
+        android:id="@+id/chkStandard"
+        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

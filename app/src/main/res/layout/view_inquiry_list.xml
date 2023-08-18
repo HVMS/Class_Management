@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:clickable="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/dimen_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvCourseInitial"
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="@dimen/size_60"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/size_5"
+                    android:layout_marginRight="@dimen/size_5"
+                    android:background="@drawable/round_white_background"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_size_24"
+                    android:visibility="gone"
+                    tools:text="A" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/relCourseAndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/size_5"
+                        android:paddingTop="@dimen/size_5"
+                        android:paddingRight="@dimen/size_5">
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            app:font_type="medium"
+                            android:id="@+id/tvInquiryPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tvInquiryDate"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/colorTextDrawer"
+                            android:textSize="@dimen/font_size_20"
+                            android:textStyle="bold"
+                            tools:text="Person Name" />
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            app:font_type="regular"
+                            android:id="@+id/tvInquiryDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/font_size_14"
+                            tools:text="Inquiry Date" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relInquiryPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relCourseAndDate"
+                        android:padding="@dimen/size_5">
+
+                        <LinearLayout
+                            android:id="@+id/linPersonNameAndContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="vertical">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:visibility="gone"
+                                app:font_type="medium"
+                                android:id="@+id/tvInquiryPersonContact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_18"
+                                tools:text="Contact" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                app:font_type="medium"
+                                android:id="@+id/tvInquiryCourse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/colorInquiryTheme"
+                                android:textSize="@dimen/font_size_14"
+                                tools:text="Course" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_call"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_alignParentRight="true"
+                                android:padding="@dimen/size_3"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_call"
+                                android:tint="@color/colorInquiryTheme" />
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_delete_inquiry"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_below="@+id/iv_call"
+                                android:layout_alignParentRight="true"
+                                android:padding="@dimen/size_3"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_delete"
+                                android:tint="@color/colorBlack" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

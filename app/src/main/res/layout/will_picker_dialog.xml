@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/rel_month_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:padding="@dimen/dimen_10"
+            android:background="@color/my_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        style="@style/tv_input_title"
+                        android:text="Month"
+                        android:textSize="@dimen/font_dimen_22"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_gravity="center">
+                    </com.globalitians.employees.customviews.CustomTextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        style="@style/tv_input_title"
+                        android:text="Year"
+                        android:textSize="@dimen/font_dimen_22"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dimen_5">
+                    </com.globalitians.employees.customviews.CustomTextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_select_month_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/rel_month_year"
+            android:layout_margin="@dimen/dimen_5"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <NumberPicker
+                    android:id="@+id/numberpickermonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_180"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:descendantFocusability="blocksDescendants" >
+                </NumberPicker>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <NumberPicker
+                    android:id="@+id/numberpickeryear"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_180"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:descendantFocusability="blocksDescendants">
+                </NumberPicker>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_cancel_okay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_select_month_year"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_margin="@dimen/dimen_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/dimen_5">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cancel"
+                    app:font_type="medium"
+                    android:textSize="@dimen/font_dimen_18"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/my_blue">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/dimen_5">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/btnOkay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strOkay"
+                    app:font_type="medium"
+                    android:textColor="@color/darkGrey"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_dimen_18"
+                    android:gravity="center">
+                </com.globalitians.employees.customviews.CustomTextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>

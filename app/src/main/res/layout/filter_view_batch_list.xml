@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:focusable="true"
+    android:id="@+id/rel_container"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:clickable="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_row_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10">
+
+                <com.globalitians.employees.customviews.CustomTextView
+                    android:id="@+id/tvCourseInitial"
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="@dimen/size_60"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/size_5"
+                    android:layout_marginRight="@dimen/size_5"
+                    android:background="@drawable/round_white_background"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_size_24"
+                    android:visibility="gone"
+                    tools:text="A" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/relCourseAndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/size_5"
+                        android:paddingTop="@dimen/size_5"
+                        android:paddingRight="@dimen/size_5">
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            android:id="@+id/tv_batch_name"
+                            android:layout_width="@dimen/dimen_200"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tvInquiryDate"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/colorTextDrawer"
+                            android:textSize="@dimen/font_size_20"
+                            android:textStyle="bold"
+                            app:font_type="medium"
+                            tools:text="Batch Name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relInquiryPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relCourseAndDate"
+                        android:padding="@dimen/size_5">
+
+                        <RelativeLayout
+                            android:id="@+id/linPersonNameAndContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:id="@+id/tvInquiryPersonContact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/font_size_18"
+                                android:visibility="gone"
+                                app:font_type="medium"
+                                tools:text="Contact" />
+
+                            <com.globalitians.employees.customviews.CustomTextView
+                                android:id="@+id/tv_batch_alias"
+                                android:layout_width="@dimen/dimen_200"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/colorTextDrawer"
+                                android:textSize="@dimen/font_size_16"
+                                app:font_type="medium"
+                                tools:text="Alias" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_300"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_1"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/black"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:id="@+id/linFilterDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:padding="@dimen/size_10"
+            android:background="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cbFilterByDate"
+                android:layout_toLeftOf="@+id/ivClose"
+                android:textSize="@dimen/font_size_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorWhite"
+                android:text="@string/strFilterByDate"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorWhite" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:text="Select Date"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/tvSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_20"
+            android:drawableLeft="@drawable/ic_cal"
+            android:drawablePadding="@dimen/size_5"
+            android:drawableTint="@color/colorBlack"
+            android:hint="dd-mm-yyyy"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="@color/colorBlackLight"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"
+                android:padding="@dimen/size_10"
+                android:text="@string/apply"
+                android:id="@+id/tvApply"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:background="@color/colorBlackAlpha"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"
+                android:padding="@dimen/size_10"
+                android:text="@string/cancel"
+                android:id="@+id/tvCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

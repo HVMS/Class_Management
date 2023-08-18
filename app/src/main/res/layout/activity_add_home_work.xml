@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_xml_05">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorWhite"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_55"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_top_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_10"
+                app:cardElevation="@dimen/dimen_3"
+                app:cardBackgroundColor="#fff"
+                android:layout_margin="@dimen/dimen_5">
+
+                <LinearLayout
+                    android:id="@+id/rel_homework_detail_top_title"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="vertical">
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_homework_title"
+                        style="@style/tv_input_title"
+                        app:font_type="medium"
+                        android:textColor="@color/mypurple"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:text="Title"/>
+
+                    <com.globalitians.employees.customviews.CustomEditText
+                        android:id="@+id/edt_homework"
+                        style="@style/edt_input"
+                        app:font_type="medium"
+                        android:textColor="@color/colorBlackLight"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:background="@drawable/drawable_edittext_login"
+                        android:hint="E.g. Hello World Java Program"/>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        style="@style/tv_input_title"
+                        app:font_type="medium"
+                        android:textColor="@color/mypurple"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:text="Description"
+                        android:layout_marginTop="@dimen/dimen_10"/>
+
+                    <com.globalitians.employees.customviews.CustomEditText
+                        android:id="@+id/edt_description"
+                        style="@style/edt_input"
+                        app:font_type="medium"
+                        android:textColor="@color/colorTextDrawer"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:background="@drawable/drawable_edittext_login"
+                        android:lines="4"
+                        android:maxLines="4"
+                        android:inputType="textMultiLine"
+                        android:ellipsize="end"
+                        android:hint="@string/strDescription"/>\
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        style="@style/tv_input_title"
+                        android:id="@+id/tv_select_batch"
+                        app:font_type="medium"
+                        android:textColor="@color/mypurple"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:text="Select Batch"
+                        android:layout_marginTop="@dimen/dimen_10"/>
+                    <Spinner
+                        android:id="@+id/spinner_batch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_select_batch"
+                        android:entries="@array/array_batches">
+                    </Spinner>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        android:id="@+id/tv_show_students"
+                        style="@style/tv_input_title"
+                        android:textColor="@color/my_blue"
+                        android:textSize="@dimen/font_size_16"
+                        app:font_type="medium"
+                        android:text="Show Students"
+                        android:autoLink="web"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dimen_10">
+                    </com.globalitians.employees.customviews.CustomTextView>
+
+                    <com.globalitians.employees.customviews.CustomTextView
+                        style="@style/tv_input_title"
+                        app:font_type="medium"
+                        android:textSize="@dimen/font_dimen_18"
+                        android:textColor="@color/mypurple"
+                        android:text="Assignments"
+                        android:drawableLeft="@drawable/ic_pin_01"
+                        android:layout_marginTop="@dimen/dimen_10"/>
+
+                    <Button
+                        android:id="@+id/attach_file_btn"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_40"
+                        android:textSize="@dimen/font_dimen_16"
+                        android:text="Attach File"
+                        android:background="@drawable/attach_btn_bk"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlackAlpha"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layoutAnimation="@anim/layout_animation_left_to_right">
+                    </android.support.v7.widget.RecyclerView>
+
+                    <!--<ImageView
+                        android:id="@+id/uploaded_photo"
+                        android:layout_width="@dimen/dimen_95"
+                        android:layout_height="@dimen/dimen_95"
+                        android:src="@drawable/ic_user_round"
+                        android:visibility="visible"/>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_course_file_pick"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/size_10"
+                            android:src="@drawable/ic_pdf"
+                            android:visibility="gone"/>
+
+                        <com.globalitians.employees.customviews.CustomTextView
+                            android:id="@+id/tv_pdf_file_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="Upload Syllabus file(.pdf or .doc)"
+                            android:textColor="@color/colorBlack"
+                            android:visibility="gone"
+                            android:clickable="true"
+                            android:autoLink="all"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_add_hw"
+                        android:layout_width="@dimen/dimen_200"
+                        android:layout_height="wrap_content"
+                        android:text="Add Homework"
+                        android:background="@drawable/edit_btn_bk"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font_dimen_18">
+                    </Button>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
